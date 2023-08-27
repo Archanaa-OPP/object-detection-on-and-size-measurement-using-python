@@ -1,0 +1,18 @@
+PROBLEM STATEMENT
+Develop a computer vision system that can accurately measure the dimensions of objects in an image or video frame. The system should be able to detect objects of interest and extract relevant features, such as their area, perimeter, and centroid, to calculate their dimensions. The system should also be able to handle objects of various shapes, sizes, and orientations, and be robust to variations in lighting and background. The output should be presented in a user-friendly format, such as a graphical user interface or a text file, and the system should be efficient enough to process images or video frames in real-time on a standard computer.
+This problem statement could be adapted for a variety of applications, such as quality control in manufacturing, object recognition in robotics, or object tracking in surveillance. The specific requirements and constraints of the application should be taken into account when designing the system, and appropriate performance metrics should be used to evaluate the system's accuracy, speed, and robustness.
+3.1. EXISTING SYSTEM 
+Here are some common methods:
+Ruler or Tape Measure: This is a simple and common method of object measurement. The ruler or tape measure is placed against the object, and the measurement is read off in either inches or centimetres.
+Callipers: Callipers are commonly used in the manufacturing industry to measure the dimensions of objects. They consist of two jaws that can be adjusted to fit around the object being measured. The distance between the jaws is then read off a scale to determine the object's dimensions.
+Micro meter: A micrometres is a precision instrument used to measure small distances. It works on the same principle as callipers, but it is much more accurate.
+
+Laser Distance Meter: This is a handheld device that uses a laser to determine the distance between two points. It is commonly used in construction and architecture to measure distances over long distances.
+3D Scanning: 3D scanning is a technique used to create a digital model of an object. It works by scanning the object from different angles and creating a 3D model based on the data collected.
+Coordinate Measuring Machine (CMM): A CMM is a device used to measure the dimensions of objects in three dimensions. It works by using a probe to touch the surface of the object being measured and then recording the data.
+We change the traditional method of measurement to digital using OpenCV software library in python.
+3.2. DISADVANTAGES
+	Existing system performance is very low
+	Computationally complex
+	More Execution time required to generate results
+
