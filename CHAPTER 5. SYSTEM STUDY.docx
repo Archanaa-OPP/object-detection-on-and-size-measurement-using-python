@@ -1,0 +1,102 @@
+DEVELOPMENT PROCESS
+4.1.	REQUIREMENT ANALYSIS
+Requirements are a feature of a system or description of something that the system is capable of doing in order to fulfil the system’s purpose. It provides the appropriate mechanism for understanding what the customer wants, analyzing the needs assessing feasibility, negotiating a reasonable solution, specifying the solution unambiguously, validating the specification and managing the requirements as they are translated into an operational system.
+4.1.1.	PYTHON:
+Python is a dynamic, high level, free open source and interpreted programming language. It supports object-oriented programming as well as procedural oriented programming. In Python, we don’t need to declare the type of variable because it is a dynamically typed language.
+For example, x=10 .Here, x can be anything such as String, int, etc.
+Python is an interpreted, object-oriented programming language similar to PERL,  that has gained popularity because of its clear syntaxand readability. Python is said to be relatively easy to learn and portable, meaning its statements can be interpreted in a number of operating systems, including UNIX-based systems, Mac OS, MS-DOS, OS/2, and various versions of Microsoft Windows 98. Python was created by Guido van Rossum, a former resident of the Netherlands, whose favourite comedy group at the time was Monty Python's Flying Circus. The source code is freely available and open for modification and reuse. Python has a significant number of users.
+Features in Python
+There are many features in Python, some of which are discussed below   
+•	Easy to code
+•	Free and Open Source
+•	 Object-Oriented Language
+•	GUI Programming Support
+•	High-Level Language
+•	Extensible feature
+•	Python is Portable language
+•	Python is Integrated language
+•	Interpreted Language
+
+4.2.	ANACONDA 
+Anaconda distribution comes with over 250 packages automatically installed, and over 7,500 additional open-source packages can be installed from PyPI as well as the anaconda package and virtual environment manager. It also includes a GUI, Anaconda Navigator, as a graphical alternative to the command line interface (CLI).
+The big difference between anaconda and the pip package manager is in how package dependencies are managed, which is a significant challenge for Python data science and the reason anaconda exists.
+When pip installs a package, it automatically installs any dependent Python packages without checking if these conflict with previously installed packages. It will install a package and any of its dependencies regardless of the state of the existing installation. Because of this, a user with a working installation of, for example, Google Tensorflow, can find that it stops working having used pip to install a different package that requires a different version of the dependent numpy library than the one used by Tensorflow. In some cases, the package may appear to work but produce different results in detail.
+In contrast, anaconda analyses the current environment including everything currently installed, and, together with any version limitations specified (e.g. the user may wish to have Tensorflow version 2,0 or higher), works out how to install a compatible set of dependencies, and shows a warning if this cannot be done.
+Opensource packages can be individually installed from the Anaconda repository, Anaconda Cloud (anaconda.org), or the user's own private repository or mirror, using the anaconda install command. Anaconda, Inc. compiles and builds the packages available in the Anaconda repository itself, and provides binaries for Windows 32/64 bit, Linux 64 bit and MacOS 64-bit. Anything available on PyPI may be installed into a anaconda environment using pip, and anaconda will keep track of what it has installed itself and what pip has installed.
+Custom packages can be made using the anaconda build command, and can be shared with others by uploading them to Anaconda Cloud, PyPI or other repositories.
+The default installation of Anaconda2 includes Python 2.7 and Anaconda3 includes Python 3.7. However, it is possible to create new environments that include any version of Python packaged with anaconda. 
+4.2.1.	Anaconda Navigator
+Anaconda Navigator is a desktop graphical user interface (GUI) included in Anaconda distribution that allows users to launch applications and manage anaconda packages, environments and channels without using command-line commands. Navigator can search for packages on Anaconda Cloud or in a local Anaconda Repository, install them in an environment, run the packages and update them. It is available for Windows, macOS and Linux.
+The following applications are available by default in Navigator: 
+•	JupyterLab
+•	Jupyter Notebook
+•	QtConsole
+•	Spyder
+•	Glue
+•	Orange
+•	RStudio
+•	Visual Studio Code
+interface in early 2018. 
+4.3.	RESOURCE REQUIREMENTS:
+SOFTWARE REQUIREMENTS:
+
+Operating System	Windows 7or later
+Simulation Tool	Anaconda (Jupyter notebook)
+Documentation	Ms – Office
+
+HARDWARE REQUIREMENTS:
+
+CPU type	I5 and Above 
+Ram size	4GB
+Hard disk capacity	80 GB
+Keyboard type	Internet keyboard
+Monitor type	15 Inch colour monitor
+CD -drive type	52xmax
+
+
+4.4.	SYSTEM ARCHITECTURE
+ 
+
+4.5.	PROPOSED SYSTEM
+            In this proposed method we use OpenCV library to detect the object, which are present in that images and measure the height and width of the image using scipy distance measure library. Load the image using Open CV's imread () function. Convert the image to grayscale using Open CV's cvt Color () function. Apply a threshold to the image to create a binary image using Open CV's Threshold () function. This will convert the grayscale image to a binary image, where the object is represented as white pixels and the background is represented as black pixels. Find the contours of the object in the binary image using Open CV's find Contours () function. This will identify the boundary of the object. Calculate the area and perimeter of the object using Open CV's contour Area () and arc Length () functions, respectively. These functions take the contour as an argument and return the area and perimeter of the object. Calculate the bounding box of the object using Open CV's bounding Rect () function. This will return the coordinates of the top-left corner of the bounding box and its width and height. Optionally, you can also calculate other features such as the centroid of the object using Open CV's moments () function.
+
+4.5.1.	ADVANTAGES
+
+•	Easy detection of the Object with the concluded technique. 
+•	Time consuming.
+•	Best accuracy of Measurements.
+
+SYSTEM MODULES:
+•	Module 1: Dataset Collection 
+•	Module 2: Data pre-processing
+•	Module 3: Object detection
+•	Module 4: Object measurement
+•	Module 5: Save data 
+
+
+Module 1: Dataset Collection 
+We provides functions for reading and writing images in various file formats, including imread(), imwrite(), and VideoCapture(). We collected the data on own from search engines.
+
+
+Module 2: Data pre-processing
+OpenCV provides various functions for preprocessing images, such as converting images to grayscale (cvtColor()), applying filters (e.g., Gaussian Blur(), median Blur()), and applying thresholding (threshold()). Preprocess the images to enhance the object of interest and remove noise. This can involve operations such as filtering, thresholding, and morphological operations.
+
+Module 3: Object detection
+OpenCV provides functions for detecting and segmenting objects in images, such as find Contours (), draw Contours (), and connected Components ().Use Open CV's object detection functions to locate the object(s) of interest in the image. This can involve contour detection, feature detection, or machine learning-based object detection. The functions for object detection include cv2. Find Contours (), cv2.goodFeaturesToTrack (), and the DNN module for deep learning-based detection.
+
+Module 4: Object measurement
+OpenCV provides functions for measuring various properties of objects in images, such as contour Area (), arc Length (), bounding Rect (), and min Enclosing Circle ().Once you have detected the object(s) of interest, you can measure their properties such as area, perimeter, centroid, and orientation using Open CV's geometric functions. These functions include cv2.contourArea (), cv2.arcLength (), cv2.moments (), and cv2.fitEllipse ().
+
+Module 5: Save data 
+Save the measured object properties and any other relevant data in a format that is suitable for your application. This can be a text in console, how many objects are there and which are detected in that image dataset we uploaded.
+
+
+
+
+
+
+
+
+
+
+
